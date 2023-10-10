@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pushes",
+  "info": {
+    "singularName": "push",
+    "pluralName": "pushes",
+    "displayName": "push"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pushID": {
+      "type": "integer"
+    },
+    "no_dog": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "datesess": {
+      "type": "datetime"
+    }
+  }
+}

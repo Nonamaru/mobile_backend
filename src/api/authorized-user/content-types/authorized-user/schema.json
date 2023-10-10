@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authorized_users",
+  "info": {
+    "singularName": "authorized-user",
+    "pluralName": "authorized-users",
+    "displayName": "authorized_user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "text"
+    },
+    "mai_id": {
+      "type": "string"
+    },
+    "login": {
+      "type": "string"
+    },
+    "device": {
+      "type": "string"
+    },
+    "no_dog": {
+      "type": "string"
+    },
+    "passw": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "useragent": {
+      "type": "string"
+    },
+    "datesess": {
+      "type": "datetime"
+    },
+    "userID": {
+      "type": "string"
+    }
+  }
+}

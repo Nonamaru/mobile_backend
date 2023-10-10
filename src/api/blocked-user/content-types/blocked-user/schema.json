@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blocked_users",
+  "info": {
+    "singularName": "blocked-user",
+    "pluralName": "blocked-users",
+    "displayName": "Blocked_user"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blockedID": {
+      "type": "integer"
+    },
+    "login": {
+      "type": "string"
+    },
+    "datesess": {
+      "type": "datetime"
+    },
+    "device": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offices",
+  "info": {
+    "singularName": "office",
+    "pluralName": "offices",
+    "displayName": "Office",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "officeID": {
+      "type": "integer"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "CityBK": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "clock": {
+      "type": "customField",
+      "customField": "plugin::timezone-select.timezone"
+    },
+    "City": {
+      "type": "enumeration",
+      "enum": [
+        "Екатеринбург",
+        "Москва",
+        "Питер",
+        "Кострома",
+        "Крым",
+        "Сочи"
+      ]
+    },
+    "Phone": {
+      "type": "string"
+    }
+  }
+}
