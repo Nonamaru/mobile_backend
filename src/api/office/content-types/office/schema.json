@@ -12,37 +12,31 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "officeID": {
-      "type": "integer"
-    },
     "latitude": {
       "type": "float"
     },
     "longitude": {
       "type": "float"
     },
-    "CityBK": {
-      "type": "string"
-    },
     "Address": {
       "type": "string"
-    },
-    "clock": {
-      "type": "customField",
-      "customField": "plugin::timezone-select.timezone"
     },
     "City": {
       "type": "enumeration",
       "enum": [
-        "Екатеринбург",
-        "Москва",
-        "Питер",
-        "Кострома",
-        "Крым",
-        "Сочи"
+        "Щёлкино",
+        "Феодосия",
+        "пгт. Ленино",
+        "Керчь",
+        "пгт. Кировское",
+        "Алушта",
+        "Белогорск"
       ]
     },
     "Phone": {
+      "type": "string"
+    },
+    "Clock": {
       "type": "string"
     }
   }

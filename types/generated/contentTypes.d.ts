@@ -23,6 +23,7 @@ export interface AdminPermission extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         minLength: 1;
       }>;
+    actionParameters: Attribute.JSON & Attribute.DefaultTo<{}>;
     subject: Attribute.String &
       Attribute.SetMinMaxLength<{
         minLength: 1;
@@ -688,19 +689,19 @@ export interface ApiAdAd extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    adID: Attribute.Integer;
-    title: Attribute.String;
     start: Attribute.DateTime;
     finish: Attribute.DateTime;
     photo: Attribute.Media;
     link: Attribute.String;
     city: Attribute.Enumeration<
       [
-        '\u0415\u043A\u0430\u0442\u0435\u0440\u0438\u043D\u0431\u0443\u0440\u0433',
-        '\u041A\u0440\u044B\u043C',
-        '\u0421\u043E\u0447\u0438',
-        '\u041C\u043E\u0441\u043A\u0432\u0430',
-        '\u041F\u0438\u0442\u0435\u0440'
+        '\u0429\u0451\u043B\u043A\u0438\u043D\u043E',
+        '\u0424\u0435\u043E\u0434\u043E\u0441\u0438\u044F',
+        '\u043F\u0433\u0442. \u041B\u0435\u043D\u0438\u043D\u043E',
+        '\u041A\u0435\u0440\u0447\u044C',
+        '\u043F\u0433\u0442. \u041A\u0438\u0440\u043E\u0432\u0441\u043A\u043E\u0435',
+        '\u0410\u043B\u0443\u0448\u0442\u0430',
+        '\u0411\u0435\u043B\u043E\u0433\u043E\u0440\u0441\u043A'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -799,24 +800,22 @@ export interface ApiOfficeOffice extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    officeID: Attribute.Integer;
     latitude: Attribute.Float;
     longitude: Attribute.Float;
-    CityBK: Attribute.String;
     Address: Attribute.String;
-    clock: Attribute.String &
-      Attribute.CustomField<'plugin::timezone-select.timezone'>;
     City: Attribute.Enumeration<
       [
-        '\u0415\u043A\u0430\u0442\u0435\u0440\u0438\u043D\u0431\u0443\u0440\u0433',
-        '\u041C\u043E\u0441\u043A\u0432\u0430',
-        '\u041F\u0438\u0442\u0435\u0440',
-        '\u041A\u043E\u0441\u0442\u0440\u043E\u043C\u0430',
-        '\u041A\u0440\u044B\u043C',
-        '\u0421\u043E\u0447\u0438'
+        '\u0429\u0451\u043B\u043A\u0438\u043D\u043E',
+        '\u0424\u0435\u043E\u0434\u043E\u0441\u0438\u044F',
+        '\u043F\u0433\u0442. \u041B\u0435\u043D\u0438\u043D\u043E',
+        '\u041A\u0435\u0440\u0447\u044C',
+        '\u043F\u0433\u0442. \u041A\u0438\u0440\u043E\u0432\u0441\u043A\u043E\u0435',
+        '\u0410\u043B\u0443\u0448\u0442\u0430',
+        '\u0411\u0435\u043B\u043E\u0433\u043E\u0440\u0441\u043A'
       ]
     >;
     Phone: Attribute.String;
+    Clock: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -861,7 +860,7 @@ export interface ApiPushPush extends Schema.CollectionType {
   };
 }
 
-declare module '@strapi/strapi' {
+declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
       'admin::permission': AdminPermission;
